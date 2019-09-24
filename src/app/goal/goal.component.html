@@ -1,6 +1,6 @@
-<ul>
-    <li *ngFor="let goal of goals">{{ goal.name }}</li>
-    <app-goal-details></app-goal-details>
+<ul *ngFor="let goal of goals">
+    <li>{{ goal.name }}</li>
+    <app-goal-details [goal]='goal'></app-goal-details>
 </ul>
   
-  <p *ngIf="goals.length > 5">You have many goals</p>
+<p *ngIf="goals.length > 5">You have many goals</p>
