@@ -1,6 +1,7 @@
-<ul *ngFor="let goal of goals">
+<ul *ngFor="let goal of goals; let i = index">
     <li>{{ goal.name }}</li>
-    <app-goal-details [goal]='goal'></app-goal-details>
+    <app-goal-details [goal]='goal' *ngIf="goal.showDescription"></app-goal-details>
+    <button (click)='toggleDetails(i)'>Details</button>
 </ul>
   
 <p *ngIf="goals.length > 5">You have many goals</p>
