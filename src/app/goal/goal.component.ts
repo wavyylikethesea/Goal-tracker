@@ -23,13 +23,16 @@ export class GoalComponent implements OnInit {
   }
   
   //mark goal complete
-  completeGoal(isComplete, index)  {
-    if (isComplete)  {
-      this.goals.splice(index, 1);
+  deleteGoal(isComplete, index){
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.goals[index].name}?`)
 
+      if (toDelete){
+        this.goals.splice(index,1)
+      }
     }
   }
-
+  
   constructor() { }
 
   ngOnInit() {
