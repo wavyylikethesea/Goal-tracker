@@ -15,8 +15,12 @@
             
         </div>
     </div>    
- </div> 
-  <br><hr><br>
-<p *ngIf="goals.length > 5">You have many goals</p>
+
+  <br><hr>
+  <div class="col-md-6">
+    <app-goal-form></app-goal-form>
+  </div>
+</div> 
 <br><hr>
+  <p *ngIf="goals.length > 5">You have many goals</p>
 </div>
